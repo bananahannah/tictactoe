@@ -1,0 +1,115 @@
+/* * {
+    border: 1px solid black;
+} */
+
+body {
+    background-color: black;
+}
+
+@font-face {
+font-family:'Pac-Font';
+src: url(pac-font.ttf);
+}
+
+h1 {
+    font-family: 'Pac-Font';
+    color: white;
+    font-size: 60px;
+}
+
+.container {
+    display: grid;
+    grid-template-columns: repeat(3, auto);
+}
+
+
+.box0, .box1, .box2, .box3, .box4, .box5, .box6, .box7, .box8  {
+    width: 100px;
+    height:100px;
+    border: dotted 5px #1919A6;
+    padding: 10px;
+    margin: 12px; 
+    background-color: black; 
+    font-family: 'Pac-Font';
+    color: white;
+    font-size: 100px;
+}
+
+
+#bg-image-One, #bg-image-Two #bg-image-Three {
+    position:relative;
+    height: 50px;;
+    width:50px;
+    margin:0 auto;
+  }
+
+  
+  #bg-image-One img {
+      height: 50px;
+      width: 50px;
+      position:absolute;
+      background-repeat: repeat;
+      left:0;
+      opacity: 0;
+      animation-name:fadeinout, slidein;
+      animation-duration:2s, 1s;
+      animation-iteration-count:infinite, 1;
+      animation-direction:alternate, normal;
+    }
+    
+    #bg-image-Two img {
+      height: 50px;
+      width: 50px;
+      position:absolute;
+      background-repeat: repeat;
+      left:0;
+      opacity: 0;
+      animation-name:fadeinout, slidein;
+      animation-duration:2s, 1s;
+      animation-iteration-count:infinite, 1;
+      animation-direction:alternate, normal;
+  }
+
+
+  #bg-image-Three img {
+    height: 50px;
+    width: 50px;
+    position:absolute;
+    background-repeat: repeat;
+    left:0;
+    opacity: 0;
+    animation-name:fadeinout, slidein;
+    animation-duration:2s, 1s;
+    animation-iteration-count:infinite, 1;
+    animation-direction:alternate, normal;
+}
+
+
+@keyframes fadeinout {
+  0% {
+    opacity:0
+  }
+
+  100% {
+    opacity:100
+  }
+}
+
+@keyframes slidein {
+  from {
+    left:-100px;
+  }
+  
+  to {
+    left:0px;
+  }
+}
+
+
+#imageBlock img:hover {
+    opacity:0;
+  }
+
+.restartBtn {
+    display: block;
+} 
