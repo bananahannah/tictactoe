@@ -4,6 +4,11 @@
 
 This is an interactive, 2 player game built with HTML, CSS and Javascript 
 
+
+
+The updated version will have an ability to track the game, and ideally choose your own player. These will happen as my coding knowledge and capabilities get beter :)
+
+
 ## Special thanks
 
 General Assembly, DT, Kasun and Sean for helping me fight my way through this project and finish it :) 
