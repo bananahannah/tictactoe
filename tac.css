@@ -1,9 +1,24 @@
 /* * {
-    border: 1px solid black;
+    border: 1px solid white;
 } */
+
 
 body {
     background-color: black;
+    overflow: hidden;
+}
+
+
+.first {
+  width: 100%;
+  position: absolute;
+  left: 0px;
+  top: 0px;
+  z-index: -1;
+  animation-name:fadeinout;
+  animation-duration:2s, 1s;
+  animation-iteration-count:infinite, 1;
+  animation-direction:alternate, normal;
 }
 
 @font-face {
@@ -14,68 +29,60 @@ src: url(pac-font.ttf);
 h1 {
     font-family: 'Pac-Font';
     color: white;
-    font-size: 60px;
+    font-size: 100px;
+    margin-left:auto;
+    margin-right:auto;
+    width:100%;
+    display: inline-block;
+    text-align: center;
 }
 
 .container {
     display: grid;
-    grid-template-columns: repeat(3, auto);
+    grid-template-columns: repeat(3, 300px);
+    grid-template-rows: repeat(3, 300px);
+    margin: 0 auto;
+    text-align: center;
+    justify-content: center;
 }
 
 
 .box0, .box1, .box2, .box3, .box4, .box5, .box6, .box7, .box8  {
-    width: 100px;
-    height:100px;
-    border: dotted 5px #1919A6;
-    padding: 10px;
+    border: dotted 5px #1919A6; 
     margin: 12px; 
     background-color: black; 
     font-family: 'Pac-Font';
     color: white;
-    font-size: 100px;
+    font-size: 200px;
+    text-align: center;
+    justify-content: center;
+    display: flex;
+    align-items: center;
+}
+
+#winningMessageText {
+    font-family: Impact, Haettenschweiler, 'Arial Narrow Bold', sans-serif ;
+    color: white;
+    font-size: 60px;
 }
 
 
-#bg-image-One, #bg-image-Two #bg-image-Three {
+#bg-image-One, #bg-image-Two{
     position:relative;
-    height: 50px;;
-    width:50px;
     margin:0 auto;
   }
 
   
-  #bg-image-One img {
-      height: 50px;
-      width: 50px;
-      position:absolute;
-      background-repeat: repeat;
-      left:0;
-      opacity: 0;
-      animation-name:fadeinout, slidein;
-      animation-duration:2s, 1s;
-      animation-iteration-count:infinite, 1;
-      animation-direction:alternate, normal;
-    }
+#bg-image-One img {
+    left:0;
+    opacity: 0;
+    animation-name:fadeinout, slidein;
+    animation-duration:2s, 1s;
+    animation-iteration-count:infinite, 1;
+    animation-direction:alternate, normal;
+}
     
-    #bg-image-Two img {
-      height: 50px;
-      width: 50px;
-      position:absolute;
-      background-repeat: repeat;
-      left:0;
-      opacity: 0;
-      animation-name:fadeinout, slidein;
-      animation-duration:2s, 1s;
-      animation-iteration-count:infinite, 1;
-      animation-direction:alternate, normal;
-  }
-
-
-  #bg-image-Three img {
-    height: 50px;
-    width: 50px;
-    position:absolute;
-    background-repeat: repeat;
+#bg-image-Two img {
     left:0;
     opacity: 0;
     animation-name:fadeinout, slidein;
@@ -111,5 +118,66 @@ h1 {
   }
 
 .restartBtn {
-    display: block;
+    width: 300px;
+    height: 80px;
+    margin: 0 auto;
+    background-color: orange;
+    border: solid 5px orangered;
+    border-radius: 10px;
+    font-family: 'Pac-Font';
+    font-size: 20px;
+    color: black;
+    display: table-cell; 
+    vertical-align: bottom;
+    
 } 
+
+/* The Modal (background) */
+.modal {
+  display: none; /* Hidden by default */
+  position: absolute; /* Stay in place */
+  z-index: 1; /* Sit on top */
+  left: 0;
+  top: 0;
+  width: 100%; /* Full width */
+  height: 100%; /* Full height */
+  overflow: auto; /* Enable scroll if needed */
+  background-color: white(0,0,0); /* Fallback color */
+  background-color: white(0,0,0,0.4); /* Black w/ opacity */
+  align-self: center;
+}
+
+/* Modal Content/Box */
+.modal-content {
+  background-color: black;
+  margin: 15% auto; /* 15% from the top and centered */
+  padding: 50px;
+  border: 1px solid #1919A6;
+  width: 500px; 
+  align-items: center;
+  /* font-family: 'Roboto Mono', monospace; */
+  text-align: center;
+}
+
+/* The Close Button */
+.close {
+  color: #aaa;
+  float: right;
+  font-size: 28px;
+  font-weight: bold;
+}
+
+.close:hover,
+.close:focus {
+  color: black;
+  text-decoration: none;
+  cursor: pointer;
+}
+
+.btn-wrapper {
+  text-align: center;
+}
+
+.result {
+  font-family: 'Roboto Mono', monospace;;
+}

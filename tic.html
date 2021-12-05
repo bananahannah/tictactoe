@@ -7,44 +7,52 @@
     <link rel="stylesheet" href="tac.css">
     <title>Tic Tac Toe</title>
 </head>
+<body>
+
+    <h1 class="header">Tic - Tac - Toe</h1>
+
+    <section class="container">
+            <div class="box0"></div>
+            <div class="box1"></div>
+            <div class="box2"></div>
+            <div class="box3"></div>
+            <div class="box4"></div>
+            <div class="box5"></div>
+            <div class="box6"></div>
+            <div class="box7"></div>
+            <div class="box8"></div>
 
 
-<section class="container">
+    
+    </section>
 
-    <h1 class="header">Tic Tac Toe</h1>
 
 
-    <div id ="options" class="container">
-        <div class="box0"></div>
-        <div class="box1"></div>
-        <div class="box2"></div>
-        <div class="box3"></div>
-        <div class="box4"></div>
-        <div class="box5"></div>
-        <div class="box6"></div>
-        <div class="box7"></div>
-        <div class="box8"></div>
+
+
+    <!-- The Modal -->
+    <div id="myModal" class="modal">
+        
+        <!-- Modal content -->
+        <div class="modal-content">
+            <span class="close">&times;</span>
+                <div class="winning-message">
+                <div id="winningMessageText"> 
+                    <p class ="result"></p>
+                </div>
+            </div> 
+        <div class = "btn-wrapper">
+                <button class="restartBtn">Restart Game</button>
+            </div>
+        </div>
     </div>
-    <button class="restartBtn">Restart Game</button>
-</section>
 
-<div id="bg-image-One">
-    <img class="first" src="icons-01.png"/>
-</div>
-
-<div id="bg-image-Two">
-    <img class="first" src="icons-05.png"/>
-</div>
-
-<div id="bg-image-Three">
-    <img class="first" src="icons-09.png"/>
-
-
-
-
-       <div class="winning-message" id="winningMessage">
-           <div id="winningMessageText">Goes here</div>
-       </div>
+    <div class="backgroundImage">
+        <img class="first" src="Background-01-01-01-01-01.png"/>
+    </div>
+   
+    
 <script src="toe.js"></script>
+
 </body>
 </html>
