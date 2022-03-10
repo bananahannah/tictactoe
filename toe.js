@@ -1,24 +1,24 @@
 let resetButton = document.querySelector(".restartBtn")
-var options = document.querySelector('.container')
-var boxZero = document.querySelector('.box0')
-var boxOne = document.querySelector('.box1')
-var boxTwo = document.querySelector('.box2')
-var boxThree = document.querySelector('.box3')
-var boxFour = document.querySelector('.box4')
-var boxFive = document.querySelector('.box5')
-var boxSix = document.querySelector('.box6')
-var boxSeven = document.querySelector('.box7')
-var boxEight = document.querySelector('.box8')
-var modal = document.getElementById("myModal");
-var span = document.getElementsByClassName("close")[0];
-var player1 = '1'
-var player2 = '9'
-var counter = 0;
-var winner = document.querySelector('.result')
+let options = document.querySelector('.container')
+let boxZero = document.querySelector('.box0')
+let boxOne = document.querySelector('.box1')
+let boxTwo = document.querySelector('.box2')
+let boxThree = document.querySelector('.box3')
+let boxFour = document.querySelector('.box4')
+let boxFive = document.querySelector('.box5')
+let boxSix = document.querySelector('.box6')
+let boxSeven = document.querySelector('.box7')
+let boxEight = document.querySelector('.box8')
+let modal = document.getElementById("myModal");
+let span = document.getElementsByClassName("close")[0];
+let player1 = '1'
+let player2 = '9'
+let counter = 0;
+let winner = document.querySelector('.result')
 
 function playerClick(event) {
 
-    var eventTarget = event.target
+    let eventTarget = event.target
 
     if (eventTarget.textContent == '') { 
         if (counter % 2 == 0 ){ 
@@ -46,8 +46,6 @@ function results() {
     boxTwo.textContent  == '1' && boxFive.textContent  == '1' && boxEight.textContent  =='1') {
         showModal();
         winner.innerHTML = 'PacMan Wins!'
-        console.log('player one wins')
-    
     }  
     
     if (boxZero.textContent  == '9' && boxOne.textContent  == '9' && boxTwo.textContent  != '' ||
@@ -60,12 +58,10 @@ function results() {
     boxTwo.textContent  == '9' && boxFive.textContent  == '9' && boxEight.textContent  =='9') {
         showModal();
         winner.innerHTML = 'Ghost Wins!'
-        console.log('player two wins')
     }
     if (counter == 9) {
         showModal();
         winner.innerHTML = 'Its a draw!'
-        console.log('its a draw')
     }
 }
 
@@ -83,7 +79,6 @@ function showModal() {
 
 function resetGame() {
     counter = 0;
-    
         boxZero.textContent = ''
         boxOne.textContent = ''
         boxTwo.textContent = ''
@@ -95,9 +90,5 @@ function resetGame() {
         boxEight.textContent = ''
         modal.style.display = "none";
 }
-
-
-
-
 
 resetButton.addEventListener('click', resetGame)
